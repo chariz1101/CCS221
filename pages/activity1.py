@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+import altair as alt
 
 st.title("This is Activity 1")
 
@@ -24,29 +25,18 @@ y2 = st.slider(
     0.0, 100.0)
 st.write('Y2: ', y2)
 
+dx = y2 - x1
+dy = y2 - y1
 
-def DDALine(x1, y1, x2, y2, color):
-    dx = y2 - x1
-    dy = y2 - y1
-    
-    
-    steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
-    
-    Xinc = float(dx / steps)
-    Yinc = float(dy / steps)
-    
-    for i in range(0, int(steps +1)):
-        
-        plt.plot(int(x1), int(y1), color)
-        x1 += Xinc
-        y1 += Yinc
-        
-    plt.show()
-    
 
-def main():
+steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
 
-    DDALine(x, y, xEnd, yEnd, color)
+Xinc = float(dx / steps)
+Yinc = float(dy / steps)
 
-if __name__ == '__main__':
-    main()    
+for i in range(0, int(steps +1)):
+    
+    st.pyplot(int(x1), int(y1))
+    x1 += Xinc
+    y1 += Yinc
+
