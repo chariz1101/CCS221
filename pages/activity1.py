@@ -6,7 +6,7 @@ st.title("This is Activity 1")
 
 xstart = st.slider(
     'Select a range of values',
-    0.0, 100.0, (25.0, 75.0))
+    0.0, 100.0)
 st.write('Xstart: ', xstart)
 
 
