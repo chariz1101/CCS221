@@ -25,14 +25,13 @@ y2 = st.slider(
     0.0, 100.0)
 st.write('Y2: ', y2)
 
-dx = y2 - x1
+dx = x2 - x1
 dy = y2 - y1
-
 
 steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
 
-Xinc = float(dx / steps)
-Yinc = float(dy / steps)
+Xinc = float(dx/steps)
+Yinc = float(dy/steps)
 
 for i in range(0, int(steps +1)):
     
