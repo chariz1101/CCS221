@@ -37,7 +37,8 @@ for i in range(0, int(steps +1)):
     
     fig = plt.figure()
     plt.plot(x1, y1)
-    st.pyplot(fig)
+    
     x1 += Xinc
-    y1 += Yinc  
+    y1 += Yinc      
 
+st.pyplot(fig)
