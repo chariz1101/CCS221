@@ -7,25 +7,25 @@ st.title("This is Activity 1")
 
 x1 = st.slider(
     'X1',
-    0.0, 100.0)
+    0, 100)
 st.write('X1: ', x1)
 
 y1 = st.slider(
     'Y1',
-    0.0, 100.0)
+    0, 100)
 st.write('Y1: ', y1)
 
 x2 = st.slider(
     'X2',
-    0.0, 100.0)
+    0, 100)
 st.write('X2: ', x2)
 
 y2 = st.slider(
     'Y2',
-    0.0, 100.0)
+    0, 100)
 st.write('Y2: ', y2)
 
-dx = x2 - x1
+dx = y2 - x1
 dy = y2 - y1
 
 steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
