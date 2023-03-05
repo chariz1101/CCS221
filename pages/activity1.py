@@ -39,3 +39,17 @@ for i in range(0, int(steps +1)):
     x1 += Xinc
     y1 += Yinc
 
+
+
+
+import plotly.express as px
+
+
+def plot(count):
+    x = [str(i) for i in range(0, count)]
+    y = list(range(0, count))
+    return px.bar(x=x, y=y)
+
+count = st.sidebar.slider(label="Count", min_value=1, max_value=50, value=10)
+st.write("Streamlit - Slider with Plot Performance Test")
+st.write(plot(count))
