@@ -35,7 +35,9 @@ Yinc = float(dy/steps)
 
 for i in range(0, int(steps +1)):
     
-    st.pyplot(int(x1), int(y1))
+    fig = plt.figure()
+    plt.plot(int(x1), int(y1))
+    st.pyplot(fig)
     x1 += Xinc
     y1 += Yinc
 
