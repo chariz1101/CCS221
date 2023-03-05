@@ -33,12 +33,12 @@ steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
 Xinc = float(dx/steps)
 Yinc = float(dy/steps)
 
-for i in range(0, int(steps +1)):
+x1 += Xinc
+y1 += Yinc
+
+fig = plt.figure()
+plt.plot([x1, y1])
     
-    fig = plt.figure()
-    plt.plot(x1, y1)
-    
-    x1 += Xinc
-    y1 += Yinc      
+     
 
 st.pyplot(fig)
