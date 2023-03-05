@@ -38,11 +38,11 @@ for i in range(0, int(steps +1)):
 
         fig = plt.figure()
         plt.plot([int(x1), int(y1)])
+        plt.show()
         x1 += Xinc
         y1 += Yinc
-        plt.show()
         
-
+        
 st.pyplot(fig)
 
      
