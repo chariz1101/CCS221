@@ -8,22 +8,22 @@ st.title("This is Activity 1")
 x1 = st.slider(
     'X1',
     0, 100)
-st.write('X1: ', x1)
+st.write('Value of X1: ', x1)
 
 y1 = st.slider(
     'Y1',
     0, 100)
-st.write('Y1: ', y1)
+st.write('Value of Y1: ', y1)
 
 x2 = st.slider(
     'X2',
     0, 100)
-st.write('X2: ', x2)
+st.write('Value of X2: ', x2)
 
 y2 = st.slider(
     'Y2',
     0, 100)
-st.write('Y2: ', y2)
+st.write('Value of Y2: ', y2)
 
 dx = y2 - x1
 dy = y2 - y1
@@ -39,17 +39,3 @@ for i in range(0, int(steps +1)):
     x1 += Xinc
     y1 += Yinc
 
-
-
-
-import plotly.express as px
-
-
-def plot(count):
-    x = [str(i) for i in range(0, count)]
-    y = list(range(0, count))
-    return px.bar(x=x, y=y)
-
-count = st.sidebar.slider(label="Count", min_value=1, max_value=50, value=10)
-st.write("Streamlit - Slider with Plot Performance Test")
-st.write(plot(count))
