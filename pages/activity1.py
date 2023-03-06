@@ -16,8 +16,7 @@ def DDALine(x1, y1, x2, y2, color):
 
     fig = plt.figure()
     for i in range(0, int(steps +1)):
-              
-            plt.plot([int(x1), int(y1)])
+            plt.plot(int(x1), int(y1), color)
             x1 += Xinc
             y1 += Yinc
             
@@ -40,16 +39,16 @@ def main():
         0, 100)
     st.write('Value of Y1: ', y)
 
-    xEnd = st.slider(
-        'X2',
-        0, 100)
-    st.write('Value of X2: ', xEnd)
+    # xEnd = st.slider(
+    #     'X2',
+    #     0, 100)
+    # st.write('Value of X2: ', xEnd)
 
-    yEnd = st.slider(
-        'Y2',
-        0, 100)
-    st.write('Value of Y2: ', yEnd)
-    color = "b." 
+    # yEnd = st.slider(
+    #     'Y2',
+    #     0, 100)
+    # st.write('Value of Y2: ', yEnd)
+    # color = "b." 
 
     DDALine(x, y, xEnd, yEnd, color)
 
