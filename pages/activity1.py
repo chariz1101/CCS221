@@ -39,16 +39,16 @@ def main():
         0, 100)
     st.write('Value of Y1: ', y)
 
-    # xEnd = st.slider(
-    #     'X2',
-    #     0, 100)
-    # st.write('Value of X2: ', xEnd)
+    xEnd = st.slider(
+        'X2',
+        0, 100)
+    st.write('Value of X2: ', xEnd)
 
-    # yEnd = st.slider(
-    #     'Y2',
-    #     0, 100)
-    # st.write('Value of Y2: ', yEnd)
-    # color = "b." 
+    yEnd = st.slider(
+        'Y2',
+        0, 100)
+    st.write('Value of Y2: ', yEnd)
+    color = "b." 
 
     DDALine(x, y, xEnd, yEnd, color)
 
