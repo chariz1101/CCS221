@@ -24,23 +24,40 @@ def fill(x, y, replace):
     img.set_clim([1,1000])
     plt.colorbar()
     plt.show()
-    st.image(two_d_arr)
+    st.image(img)
     
         
     
 def main():
     
-    print("X,Y        X,Y       X,Y")
-    print("------------------------")
-    print("0,0        0,1       0,2")
-    print("1,0        1,1       1,2")
-    print("2,0        2,1       2,2")
+    st.title("This is Activity 1")
+
+    x = st.slider(
+        'X',
+        0, 2)
+    st.write('Value of X: ', x)
+
+    y = st.slider(
+        'Y',
+        0, 100)
+    st.write('Value of Y: ', y)
+
+    replace = st.slider(
+        'Color',
+        1, 1000)
+    st.write('Color: ', replace)
+
+    # print("X,Y        X,Y       X,Y")
+    # print("------------------------")
+    # print("0,0        0,1       0,2")
+    # print("1,0        1,1       1,2")
+    # print("2,0        2,1       2,2")
     
-    print()
+    # print()
     
-    x = int(input("Enter X: "))
-    y = int(input("Enter Y: "))
-    replace = int(input("Enter Color (1-1000): "))
+    # x = int(input("Enter X: "))
+    # y = int(input("Enter Y: "))
+    # replace = int(input("Enter Color (1-1000): "))
     
     fill(x, y, replace)
 
