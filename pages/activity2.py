@@ -20,7 +20,7 @@ def fill(x, y, replace):
         for j in range(len(two_d_arr[i])):
             two_d_arr[x][y] = replace
             
-    img = plt.imshow(two_d_arr)
+    img = plt.figure(two_d_arr)
     img.set_clim([1,1000])
     plt.colorbar()
     plt.show()
