@@ -14,7 +14,7 @@ def DDALine(x1, y1, x2, y2, color):
     Xinc = float(dx/steps)
     Yinc = float(dy/steps)
 
-    fig = plt.figure(figsize=(100,100))  
+    fig = plt.figure()  
     for i in range(0, int(steps +1)):
             
             plt.plot([int(x1), int(y1)])
