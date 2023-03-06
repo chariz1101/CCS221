@@ -24,6 +24,7 @@ def fill(x, y, replace):
     img.set_clim([1,1000])
     plt.colorbar()
     plt.show()
+    st.image(two_d_arr)
     
         
     
