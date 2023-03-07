@@ -6,12 +6,11 @@ import matplotlib.pyplot as plt
 
 st.title("This is Activity 2")
 
-import plotly.express as px
+# Use the full page instead of a narrow central column
+st.set_page_config(layout="wide")
 
-fig = px.imshow([[1, 20, 30],
-                 [20, 1, 60],
-                 [30, 60, 1]])
-fig.show()
+# Space out the maps so the first one is 2x the size of the other three
+c1, c2, c3, c4 = st.columns((2, 1, 1, 1))
 
 # two_d_arr = np.array([[800, 800, 800],
 #                       [800, 800, 800],
