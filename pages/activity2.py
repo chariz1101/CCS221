@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 st.title("This is Activity 2")
 
@@ -20,10 +21,10 @@ def fill(x, y, replace):
         for j in range(len(two_d_arr[i])):
             two_d_arr[x][y] = replace
             
-    img = plt.figure(two_d_arr)
+    img = px.imshow(two_d_arr)
     img.set_clim([1,1000])
     plt.colorbar()
-    plt.show()
+    img.show()
     st.pyplot(img)
     
         
@@ -45,18 +46,6 @@ def main():
         1, 1000)
     st.write('Color: ', replace)
 
-    # print("X,Y        X,Y       X,Y")
-    # print("------------------------")
-    # print("0,0        0,1       0,2")
-    # print("1,0        1,1       1,2")
-    # print("2,0        2,1       2,2")
-    
-    # print()
-    
-    # x = int(input("Enter X: "))
-    # y = int(input("Enter Y: "))
-    # replace = int(input("Enter Color (1-1000): "))
-    
     fill(x, y, replace)
 
 
