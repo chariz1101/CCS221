@@ -66,9 +66,9 @@ import numpy as np
 #creating a sample array
 
 # a = np.random.normal(1, 1, size=50)
-a = np.array([[800, 800, 800],
-                      [800, 800, 800],
-                      [800, 800, 800]])
+a = np.array([[100, 100, 100],
+            [800, 800, 800],
+            [800, 800, 800]])
 
 
 #specifying the figure to plot 
