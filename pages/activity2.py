@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 
 st.title("This is Activity 2")
 
@@ -79,3 +80,13 @@ x.hist(a, bins=10)
 #plotting the figure
 
 st.pyplot(fig)
+
+color = st.color_picker('Pick A Color', '#00f900')
+st.write('The current color is', color)
+
+df = pd.DataFrame(
+   np.random.randn(10, 5),
+   columns=('col %d' % i for i in range(5)))
+
+st.table(df)
+Copy
