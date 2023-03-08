@@ -65,8 +65,8 @@ import numpy as np
 
 #creating a sample array
 
-# a = np.random.normal(1, 1, size=50)
-a = np.array([[1, 1, 1]], size=5)
+a = np.random.normal(1, 1, size=50)
+# a = np.array([[1, 1, 1]], size=5)
 
 #specifying the figure to plot 
 
