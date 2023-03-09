@@ -31,6 +31,56 @@ def DDALine(x1, y1, x2, y2, color):
         
 
 
+
+
+def bresenham(x1, y1, x2, y2, color): 
+   
+ 
+    dx = abs(x2 - x1) #change in x / delta x
+    dy = abs(y2 - y1) #change in y / delta y
+    mpx = (x1 + x2) / 2 #x midpoint
+    mpy = (y1 + y2) / 2 #y midpoint
+
+    slope = dy/float(dx) #slope
+    
+    if slope > 1:
+        dx, dy = dy, dx
+        x1, y1 = y1, x1
+        x2 ,y2 = y2, x2
+
+    pk = 2 * dy - dx #decision parameter
+    
+    xcoords = [x1] #x-coordinates
+    ycoords =[y1] #y-coordinates
+   
+    fig2=plt.figure()
+    for x in range(2,dx):
+        
+        if pk > 0: #case 2 [decision parameter satisfied] 
+            y1 = y1 + 1 if y1 < y2 else y1 - 1
+            pk = pk + 2 * (dy - dx)
+            
+        else : #otherwise
+            pk = pk + 2 * dy
+        
+        
+        x1 = x1 + 1 if x1 < x2 else x1 - 1
+        
+        
+        xcoords.append(x1)
+        ycoords.append(y1)
+
+    st.write('[Bresenhams Line] Midpoint of the Line is (x,y): ', mpx, mpy)
+
+
+    plt.plot(xcoords,ycoords)
+    plt.show() 
+    st.pyplot(fig2)
+    
+    
+    
+    
+
 def main(): 
     st.title("This is Activity 1")
 
