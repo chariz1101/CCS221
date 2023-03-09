@@ -106,6 +106,8 @@ def main():
     color = "b." 
 
     DDALine(x, y, xEnd, yEnd, color)
+    bresenham(x,y,xEnd, yEnd, color) # call for Bresenham's Line function
+    # midpoint(x,y,xEnd, yEnd, color)
 
 
 if __name__ == '__main__':
