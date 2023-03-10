@@ -22,9 +22,11 @@ def load_image (image_upload):
         return img
         
 def image_ups ():
-        image_upload = st.file_upload ("Upload Image", type=['PNG'])
-        img = load_image (image_upload)
-        st.image (img)
+      uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
+      for uploaded_file in uploaded_files:
+           bytes_data = uploaded_file.read()
+          st.write("filename:", uploaded_file.name)
+          st.write(bytes_data)
         
         
         
@@ -50,7 +52,7 @@ def main ():
 #            cols, rows, dims = image.shape
 #        
 #            translation ()
-
+       image_ups ()
     if choice == "Rotation" :
         st.subheader ("Rotation")
                       
