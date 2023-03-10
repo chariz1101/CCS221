@@ -23,11 +23,10 @@ def load_image (image_upload):
         
    
 def image_ups ():
-      uploaded_files = st.file_uploader("Upload a PNG file", accept_multiple_files=True)
-      for uploaded_file in uploaded_files:
-         bytes_data = uploaded_file.read()
-         st.write("filename:", uploaded_file.name)
-         st.write(bytes_data)
+      image_upload = st.file_uploader("Upload a PNG file", accept_multiple_files=True)
+      for image_uploads in image_upload:
+         bytes_data = image_uploads.read()
+         st.write("filename:", imageuploads.name)
         
         
         
