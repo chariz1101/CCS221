@@ -26,7 +26,9 @@ def image_ups ():
       image_upload = st.file_uploader("Upload a PNG file", accept_multiple_files=True)
       for image_uploads in image_upload:
          bytes_data = image_uploads.read()
-         st.write("filename:", imageuploads.name)
+         st.write("filename:", image_uploads.name)
+         img = load_image(image_upload)
+         st.image(img)
         
         
         
