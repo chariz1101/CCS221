@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib as plt
-import cv2
+#import cv2
 
 #i = int(1)
 
