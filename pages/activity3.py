@@ -23,8 +23,8 @@ def load_image (image_upload):
         
 def image_ups ():
         image_upload = st.file_upload ("Upload Image", type=['PNG'])
-            img = load_image (image_upload)
-            st.image (img)
+        img = load_image (image_upload)
+        st.image (img)
         
         
         
