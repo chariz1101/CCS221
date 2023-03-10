@@ -47,13 +47,13 @@ def main ():
     
     if choice == "Translation" :
         st.subheader ("Translation")
+        image_ups ()
 #        for i in range(1,4):
 #            image = cv2.imread(str(i)+".PNG")
 #            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 #            cols, rows, dims = image.shape
 #        
 #            translation ()
-       image_ups ()
     if choice == "Rotation" :
         st.subheader ("Rotation")
                       
