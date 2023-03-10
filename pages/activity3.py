@@ -3,19 +3,38 @@ import numpy as np
 import matplotlib as plt
 import cv2
 
-i = int(1)
+#i = int(1)
 
-def translation(image, x, y):
-        m_translation_ = np.float32([[1, 0, x],
-                                    [0, 1, y],
-                                    [0, 0, 1]
-                                 ])
-        translated_image = cv2.warpPerspective(image, m_translation_, (cols, rows))
-    
-        plt.axis('off')
-        plt.imshow(translated_image)
-        plt.show()
-        st.pyplot (translated_image)
+#def translation(image, x, y):
+#       m_translation_ = np.float32([[1, 0, x],
+#                                   [0, 1, y],
+#                                    [0, 0, 1]
+#                                 ])
+#        translated_image = cv2.warpPerspective(image, m_translation_, (cols, rows))
+#    
+#        plt.axis('off')
+ #       plt.imshow(translated_image)
+#        plt.show()
+#        st.pyplot (translated_image)
+
+def load_image (image_upload):
+        img = Image.open (image_upload)
+        return img
+        
+def image_ups ():
+        image_upload = st.file_upload ("Upload Image", type=['PNG'])
+            img = load_image (image_upload)
+            st.image (img)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
 def main ():
@@ -25,12 +44,12 @@ def main ():
     
     if choice == "Translation" :
         st.subheader ("Translation")
-        for i in range(1,4):
-            image = cv2.imread(str(i)+".PNG")
-            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-            cols, rows, dims = image.shape
-        
-            translation ()
+#        for i in range(1,4):
+#            image = cv2.imread(str(i)+".PNG")
+#            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+#            cols, rows, dims = image.shape
+#        
+#            translation ()
 
     if choice == "Rotation" :
         st.subheader ("Rotation")
