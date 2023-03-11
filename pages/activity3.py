@@ -19,7 +19,7 @@ def translation(i):
  
     image = cv2.imread(path + str(i) + png)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    cols, rows = (image.shape)
+    cols, rows = (image.shape[:2])
 
     translated_image = cv2.warpPerspective(image, m_translation_, (cols, rows))
     plt.axis('off')
@@ -38,7 +38,7 @@ def rotation(i):
    
     image = cv2.imread(path + str(i) + png)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    cols, rows = image.shape 
+    cols, rows = image.shape[:2]
 
     rotated_image = cv2.warpPerspective(image, m_rotation_, (int(cols), int(rows)))
     plt.axis('off')
@@ -56,7 +56,7 @@ def scaling(i):
    
     image = cv2.imread(path + str(i) + png)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    cols, rows = image.shape
+    cols, rows = image.shape[:2]
 
     scaled_image = cv2.warpPerspective(image, m_scaling_, (cols*2, rows*2))
     plt.axis('off')
@@ -74,7 +74,7 @@ def shear(i):
     
     image = cv2.imread(path + str(i) + png)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    cols, rows = image.shape
+    cols, rows = image.shape[:2]
 
     sheared_image = cv2.warpPerspective(image, m_shearing_,(int(cols*1.5), int(rows*1.5)))
     plt.axis('off')
@@ -85,7 +85,7 @@ def shear(i):
 def reflection(i):
     image = cv2.imread(address + str(i) + jpg)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    cols, rows = image.shape
+    cols, rows = image.shape[:2]
     
     m_reflection_ = np.float32([[1, 0, 0],
                                 [0, -1, rows],
