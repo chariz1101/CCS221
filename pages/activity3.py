@@ -9,7 +9,12 @@ png = str(".png")
 fig = plt.figure()
 path = str("pages/")
 
-def translation(img, x, y):
+x = []
+y = []
+scale = []
+
+
+def translation(i, x, y):
         m_translation_ = np.float32([[1, 0, x],
                                     [0, 1, y],
                                     [0, 0, 1]
@@ -22,7 +27,7 @@ def translation(img, x, y):
         st.pyplot (fig)
         
         
-def rotation(img):
+def rotation(i):
         angle = np.radians(10)
         m_rotation = np.float32([[np.cos(angle), -(np.sin (angle)), 0],
                              [np.sin(angle), np.cos(angle), 0],
@@ -35,7 +40,7 @@ def rotation(img):
         plt.show()
         st.pyplot (fig)
         
-def scaling(img, scale):
+def scaling(i, scale):
         m_scaling_ = np.float32([[scale, 0, 0],
                             [0, scale, 0],
                             [0, 0, 1]
@@ -49,7 +54,7 @@ def scaling(img, scale):
         st.pyplot (fig)
         
        
-def shear(img, x, y):
+def shear(i, x, y):
         m_shearing_ = np.float32([[1, x, 0],
                             [y, 1, 0],
                             [0, 0, 1]
@@ -63,7 +68,7 @@ def shear(img, x, y):
         st.pyplot (fig)
        
     
-def reflection(img):
+def reflection(i):
         m_reflection_ = np.float32([[1, 0, 0],
                                 [0, -1, rows],
                                 [0, 0, 1]
@@ -93,11 +98,14 @@ def main ():
         st.subheader ("Translation")
         load_image ()
         for i in range(1,4):
-            image = cv2.imread(str(img)+".PNG")
+            image = cv2.imread(str(i)+".PNG")
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             cols, rows, dims = image.shape
         
-        
+            x = st.sidebar.slider('X',0 , 1)
+            st.write('Value of X: ', x)
+            y = st.sidebar.slider('Y',0 , 1)
+            st.write('Value of Y1: ', y)
             translation ()
          
          
