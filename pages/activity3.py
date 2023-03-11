@@ -83,7 +83,7 @@ def shear(i):
     st.pyplot(fig)
 
 def reflection(i):
-    image = cv2.imread(address + str(i) + jpg)
+    image = cv2.imread(path + str(i) + png)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     cols, rows = image.shape[:2]
     
