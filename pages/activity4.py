@@ -164,7 +164,7 @@ def main():
     st.write('The shape you chose is:', option)
 
     if option == "Cube":
-        _cube_(method, bottom_lower=(0, 0, 0), side_length=3)
+        _cube_(bottom_lower=(0, 0, 0), side_length=3)
         init_cube_ = _cube_(side_length=3)
         points = tf.constant(init_cube_, dtype=tf.float32)
         method = st.selectbox('What would you like to do?', ('Translate', 'Rotate'))
