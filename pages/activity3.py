@@ -19,7 +19,7 @@ from PIL import Image
 #        st.pyplot (translated_image)
 
 def load_image ():
-      img = Image.open("imgs/liyuebg.png")
+      img = Image.open("liyuebg.png")
       im.show()
        
    
