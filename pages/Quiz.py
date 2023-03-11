@@ -7,6 +7,10 @@ png = str(".png")
 fig = plt.figure()
 path = str("pages/")
 
+Bx_old = []
+By_old = []
+Tx = []
+Ty = []
 
 
 def translation(Bx_old, By_old):
@@ -48,32 +52,28 @@ def translation_new(Bx_new,By_new):
 
 
 def main () :
-    
-    Bx_old = []
-    By_old = []
-    Tx = []
-    Ty = []
+  
 
     st.title('Quiz')
     
     x = st.sidebar.slider(
         'Initial X',
-        0, 1000)
+        0, 100)
     st.write('Value of X: ', Bx_old)
 
     y = st.sidebar.slider(
         'Initial Y',
-        0, 1000)
+        0, 100)
     st.write('Value of Y: ', By_old)
 
     x = st.sidebar.slider(
         'Added X',
-        0, 1000)
+        0, 100)
     st.write('Value of X: ', Tx)
 
     y = st.sidebar.slider(
         'Added Y',
-        0, 1000)
+        0, 100)
     st.write('Value of Y: ', Ty)
 
     Bx_new = Bx_old + Tx
