@@ -26,6 +26,7 @@ def translation_old(Bx_old, By_old):
         plt.axis('off')
         plt.imshow(translated_image)
         plt.show()
+        st.pyplot(fig)
         
 
         
@@ -41,14 +42,19 @@ def translation_new(Bx_new, By_new):
         plt.axis('off')
         plt.imshow(translated_image)
         plt.show()
+        st.pyplot(fig)
 
         
 def main():
 
-        Bx_old = int(input("Enter Initial X: "))
-        By_old = int(input("Enter Initial Y: "))
-        Tx = int(input("Enter Translation X: "))
-        Ty = int(input("Enter Translation Y: "))
+        Bx_old = st.sidebar.slider('Initial Position',0, 250)
+        st.write('The Intial Position is: ', Bx_old)
+        By_old = st.sidebar.slider('By_Old',0, 250)
+        st.write('The Initial Position is: ', By_old)
+        Tx = st.sidebar.slider('Movement',0, 250)
+        st.write('The Movement is: ', Tx)
+        Ty = st.sidebar.slider('Movement',0, 250)
+        st.write('The Movement is: ', Ty)
         
         Bx_new = Bx_old + Tx
         By_new = By_old + Ty
