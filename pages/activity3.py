@@ -17,7 +17,7 @@ def translation(i):
                                  [0, 0, 1]])
     
  
-    image = cv2.imread(path + str(i) + ong)
+    image = cv2.imread(path + str(i) + png)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     cols, rows = (image.shape[:2])
 
