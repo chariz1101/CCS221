@@ -21,7 +21,7 @@ def translation(i):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     cols, rows = (image.shape[:2])
 
-    translated_image_ = cv2.warpPerspective(image, m_translation_, (cols, rows))
+    translated_image = cv2.warpPerspective(image, m_translation_, (cols, rows))
     plt.axis('off')
     plt.imshow(translated_image)
     plt.show()
