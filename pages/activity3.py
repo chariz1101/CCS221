@@ -18,7 +18,7 @@ def translation(i, x, y):
                                     [0, 0, 1]
                                  ])
    
-        translated_image = cv2.warpPerspective(image, m_translation_, (cols, rows))
+        translated_image = cv2.warpPerspective(i, m_translation_, (cols, rows))
         plt.axis('off')
         plt.imshow(translated_image)
         plt.show()
@@ -32,7 +32,7 @@ def rotation(i):
                              [0, 0, 1]])
   
   
-        rotated_image = cv2.warpPerspective(image, m_rotation, (int(cols), int(rows)))
+        rotated_image = cv2.warpPerspective(i, m_rotation, (int(cols), int(rows)))
         plt.axis('off')
         plt.imshow(rotated_image)
         plt.show()
@@ -44,7 +44,7 @@ def scaling(i, scale):
                             [0, 0, 1]
                             ])
     
-        scaled_image = cv2.warpPerspective(image, m_scaling_, (cols * 2, rows * 2))
+        scaled_image = cv2.warpPerspective(i, m_scaling_, (cols * 2, rows * 2))
     
         plt.axis('off')
         plt.imshow(scaled_image)
@@ -58,7 +58,7 @@ def shear(i, x, y):
                             [0, 0, 1]
                             ])
     
-        sheared_image = cv2.warpPerspective(image, m_shearing_, (int(cols * 1.5), int(rows * 1.5)))
+        sheared_image = cv2.warpPerspective(i, m_shearing_, (int(cols * 1.5), int(rows * 1.5)))
     
         plt.axis('off')
         plt.imshow(sheared_image)
@@ -72,7 +72,7 @@ def reflection(i):
                                 [0, 0, 1]
                                 ])
     
-        reflected_image = cv2.warpPerspective(image, m_reflection_, (int(cols), int(rows)))
+        reflected_image = cv2.warpPerspective(i, m_reflection_, (int(cols), int(rows)))
     
         plt.axis('off')
         plt.imshow(reflected_image)
@@ -96,7 +96,7 @@ def main ():
         st.subheader ("Translation")
         for i in range(1,4):
             image = cv2.imread(path + str(i) + png)
-            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            image = cv2.cvtColor(i, cv2.COLOR_BGR2RGB)
             cols, rows, dims = image.shape
         
             x = st.sidebar.slider('X',0 , 1)
