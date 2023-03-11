@@ -59,28 +59,30 @@ def main () :
     
     Bx_old = st.sidebar.slider(
         'Initial X',
-        0, 100)
+        0, 1000)
 
 
     By_old = st.sidebar.slider(
         'Initial Y',
-        0, 100)
+        0, 1000)
 
 
     Tx = st.sidebar.slider(
         'Added X',
-        0, 100)
+        0, 1000)
 
 
     Ty = st.sidebar.slider(
         'Added Y',
-        0, 100)
+        0, 1000)
 
 
     Bx_new = Bx_old + Tx
     By_new = By_old + Ty
-
+    
+    st.write('Original')
     translation(Bx_old, By_old)
+    st.write('Translated')
     translation_new(Bx_new, By_new)
 
     
