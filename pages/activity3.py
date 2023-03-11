@@ -98,7 +98,7 @@ def reflection(i):
 
 def main () :
     st.title('This is Activity 3')
-    i = st.slider('Choose Image [1, 2, 3]', 1, 3)
+    i = st.sidebar.slider('Choose Image [1, 2, 3]', 1, 3)
     option = st.sidebar.selectbox('What shape would you like to rotate?', ('Translation', 'Rotation', 'Scaling', 'Shearing', 'Reflection'))
     st.write('The image manipulation you chose is:', option)
     
