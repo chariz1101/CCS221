@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 png = str(".png")
 fig = plt.figure()
 path = str("pages/")
+i = 1
 
 Bx_old = []
 By_old = []
@@ -21,7 +22,7 @@ def translation(Bx_old, By_old):
                                  [0, 0, 1]])
     
  
-    image = cv2.imread("1.png")
+    image = cv2.imread(path + str(i) + png)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     cols, rows = (image.shape[:2])
 
@@ -40,7 +41,7 @@ def translation_new(Bx_new,By_new):
                                  [0, 0, 1]])
     
  
-    image = cv2.imread("1.png")
+    image = cv2.imread(path + str(i) + png)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     cols, rows = (image.shape[:2])
 
@@ -59,22 +60,22 @@ def main () :
     x = st.sidebar.slider(
         'Initial X',
         0, 100)
-    st.write('Value of X: ', Bx_old)
+
 
     y = st.sidebar.slider(
         'Initial Y',
         0, 100)
-    st.write('Value of Y: ', By_old)
+
 
     x = st.sidebar.slider(
         'Added X',
         0, 100)
-    st.write('Value of X: ', Tx)
+
 
     y = st.sidebar.slider(
         'Added Y',
         0, 100)
-    st.write('Value of Y: ', Ty)
+
 
     Bx_new = Bx_old + Tx
     By_new = By_old + Ty
