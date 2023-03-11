@@ -15,7 +15,7 @@ tf.compat.v1.disable_eager_execution()
 
 option=[]    
 
-def _cube_(bottom_lower=(0, 0, 0), side_length=3, method):
+def _cube_(method, bottom_lower=(0, 0, 0), side_length=3):
     """Create cube starting from the given bottom-lower point (lowest x, y, z values)"""
     bottom_lower = np.array(bottom_lower)
     
