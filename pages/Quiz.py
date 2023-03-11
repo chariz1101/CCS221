@@ -57,22 +57,22 @@ def main () :
 
     st.title('Quiz')
     
-    x = st.sidebar.slider(
+    Bx_old = st.sidebar.slider(
         'Initial X',
         0, 100)
 
 
-    y = st.sidebar.slider(
+    By_old = st.sidebar.slider(
         'Initial Y',
         0, 100)
 
 
-    x = st.sidebar.slider(
+    Tx = st.sidebar.slider(
         'Added X',
         0, 100)
 
 
-    y = st.sidebar.slider(
+    Ty = st.sidebar.slider(
         'Added Y',
         0, 100)
 
