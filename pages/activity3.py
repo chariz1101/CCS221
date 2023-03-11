@@ -7,9 +7,13 @@ import cv2
 png = str(".png")
 path = str("pages/")
 
-def translation(i):
-        m_translation_ = np.float32([[1, 0, 100],
-                                    [0, 1, 150],
+x = []
+y = []
+
+
+def translation(i,x,y):
+        m_translation_ = np.float32([[1, 0, x],
+                                    [0, 1, y],
                                     [0, 0, 1]
                                  ])
         
