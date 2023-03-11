@@ -105,10 +105,10 @@ def _plt_basic_object(points):
 
 
 
-init_cube_ = _cube_(side_length=3)
-init_pyramid_ = _pyramid_(side_length=1)
-init_rectangle_ = _rectangle_(side_length=3)
-init_diamond_ = _diamond_(side_length=1)
+init_cube_ = _cube_(method, side_length=3)
+init_pyramid_ = _pyramid_(method, side_length=1)
+init_rectangle_ = _rectangle_(method, side_length=3)
+init_diamond_ = _diamond_(method, side_length=1)
 
 def translate(points):
     def translate_obj(points, amount):
