@@ -103,7 +103,7 @@ def main ():
             st.write('Value of X: ', x)
             y = st.sidebar.slider('Y',0 , 1)
             st.write('Value of Y1: ', y)
-            translation ()
+            translation (i,x,y)
          
          
     if choice == "Rotation" :
