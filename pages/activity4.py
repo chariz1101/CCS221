@@ -121,10 +121,22 @@ def translate(points):
 
 
     with tf.compat.v1.Session() as session:
-
-        translated_shape = session.run(translated_shape) 
-
-    _plt_basic_object(translated_shape)
+        if option == "Cube":
+            translated_shape = session.run(translated_shape)
+            _plt_basic_object(translated_shape
+            
+        if option == "Pyramid":
+            translated_shape = session.run(translated_shape)
+            _plt_basic_object(translated_shape
+            
+        if option == "Rectangle":
+            translated_shape = session.run(translated_shape)
+            _plt_basic_object(translated_shape
+            
+        if option == "Diamond":
+            translated_shape = session.run(translated_shape)
+            _plt_basic_object(translated_shape)       
+            
 
 def rotate(option, points):
     def rotate_obj(points, angle):
@@ -159,16 +171,19 @@ def rotate(option, points):
             _plt_basic_object(rotated_object)        
             
 def main():
-    option = st.selectbox('What shape would you like to rotate?', ('Cube', 'Pyramid', 'Rectangle', 'Diamond'))
-
+    
+    option = st.selectbox('What shape would you like to manipulate?', ('Cube', 'Pyramid', 'Rectangle', 'Diamond'))
     st.write('The shape you chose is:', option)
-
     if option == "Cube":
         _cube_(bottom_lower=(0, 0, 0), side_length=3)
         init_cube_ = _cube_(side_length=3)
         points = tf.constant(init_cube_, dtype=tf.float32)
-        translate(points)
-        rotate(option, points)
+        method = st.selectbox('What would you like to do', ('Translate', 'Rotate'))
+        st.write('The shape you chose is:', method)
+        if option == "Translate":
+            translate(points)
+        if option == "Rotate":
+            rotate(option, points)
         
     if option == "Pyramid":
         _pyramid_(side_length=1)
