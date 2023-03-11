@@ -5,7 +5,6 @@ import cv2
 
 #to read images
 png = str(".png")
-fig = plt.figure()
 path = str("pages/")
 
 def translation(i):
