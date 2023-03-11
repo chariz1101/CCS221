@@ -22,7 +22,6 @@ def translation(i,x,y):
         cols, rows, dims = image.shape
         
         translated_image = cv2.warpPerspective(image, m_translation_, (cols, rows))
-        plt.axis('off')
         plt.imshow(translated_image)
         plt.show()
         st.pyplot (fig)
