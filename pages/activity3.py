@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib as plt
-import opencv as cv2
+import cv2
 
 #to read images
 png = str(".png")
