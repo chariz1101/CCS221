@@ -19,7 +19,7 @@ def translation(i, x, y):
                                  ])
         
         image = cv2.imread(path + str(i) + png)
-        image = cv2.cvtColor(i, cv2.COLOR_BGR2RGB)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         cols, rows, dims = image.shape
         
         translated_image = cv2.warpPerspective(i, m_translation_, (cols, rows))
