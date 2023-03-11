@@ -3,17 +3,18 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-
+x = []
+y = []
 
 png = str(".png")
 fig = plt.figure()
 path = str("pages/")
 
-def translation(i):
+def translation(i, x, y):
     
     #Translation
-    m_translation_ = np.float32([[1, 0, 1],
-                                 [0, 1, 2],
+    m_translation_ = np.float32([[1, 0, x],
+                                 [0, 1, y],
                                  [0, 0, 1]])
     
  
@@ -105,7 +106,7 @@ def main () :
     st.write('The image manipulation you chose is:', option)
     if option == "Cube":
         st.write("Translation")
-        translation(i)
+        translation(i, x, y)
     if option == "Rotation":
         st.write("Rotation")
         rotation(i)
