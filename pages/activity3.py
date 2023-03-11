@@ -51,7 +51,7 @@ def main ():
     
     if choice == "Translation" :
         st.subheader ("Translation")
-        image_ups ()
+        load_image ()
 #        for i in range(1,4):
 #            image = cv2.imread(str(i)+".PNG")
 #            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
