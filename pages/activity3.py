@@ -17,7 +17,11 @@ def translation(i, x, y):
                                     [0, 1, y],
                                     [0, 0, 1]
                                  ])
-   
+        
+        image = cv2.imread(path + str(i) + png)
+        image = cv2.cvtColor(i, cv2.COLOR_BGR2RGB)
+        cols, rows, dims = image.shape
+        
         translated_image = cv2.warpPerspective(i, m_translation_, (cols, rows))
         plt.axis('off')
         plt.imshow(translated_image)
@@ -30,8 +34,11 @@ def rotation(i):
         m_rotation = np.float32([[np.cos(angle), -(np.sin (angle)), 0],
                              [np.sin(angle), np.cos(angle), 0],
                              [0, 0, 1]])
-  
-  
+        
+        image = cv2.imread(path + str(i) + png)
+        image = cv2.cvtColor(i, cv2.COLOR_BGR2RGB)
+        cols, rows, dims = image.shape
+        
         rotated_image = cv2.warpPerspective(i, m_rotation, (int(cols), int(rows)))
         plt.axis('off')
         plt.imshow(rotated_image)
@@ -43,7 +50,11 @@ def scaling(i, scale):
                             [0, scale, 0],
                             [0, 0, 1]
                             ])
-    
+        
+        image = cv2.imread(path + str(i) + png)
+        image = cv2.cvtColor(i, cv2.COLOR_BGR2RGB)
+        cols, rows, dims = image.shape
+        
         scaled_image = cv2.warpPerspective(i, m_scaling_, (cols * 2, rows * 2))
     
         plt.axis('off')
@@ -57,7 +68,11 @@ def shear(i, x, y):
                             [y, 1, 0],
                             [0, 0, 1]
                             ])
-    
+        
+        image = cv2.imread(path + str(i) + png)
+        image = cv2.cvtColor(i, cv2.COLOR_BGR2RGB)
+        cols, rows, dims = image.shape
+        
         sheared_image = cv2.warpPerspective(i, m_shearing_, (int(cols * 1.5), int(rows * 1.5)))
     
         plt.axis('off')
@@ -71,7 +86,11 @@ def reflection(i):
                                 [0, -1, rows],
                                 [0, 0, 1]
                                 ])
-    
+        
+        image = cv2.imread(path + str(i) + png)
+        image = cv2.cvtColor(i, cv2.COLOR_BGR2RGB)
+        cols, rows, dims = image.shape
+        
         reflected_image = cv2.warpPerspective(i, m_reflection_, (int(cols), int(rows)))
     
         plt.axis('off')
@@ -80,7 +99,7 @@ def reflection(i):
         st.pyplot(fig)
         
         
-        
+ 
         
         
         
@@ -94,10 +113,6 @@ def main ():
     
     if choice == "Translation" :
         st.subheader ("Translation")
-        for i in range(1,4):
-            image = cv2.imread(path + str(i) + png)
-            image = cv2.cvtColor(i, cv2.COLOR_BGR2RGB)
-            cols, rows, dims = image.shape
         
             x = st.sidebar.slider('X',0 , 1)
             st.write('Value of X: ', x)
