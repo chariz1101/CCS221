@@ -66,7 +66,6 @@ def scaling(i):
     
 def shear(i):
     
-    # Shearing
     m_shearing_ = np.float32([[1, 0.5, 0],
                                [0, 1, 0],
                                [0, 0, 1]])
@@ -102,20 +101,23 @@ def reflection(i):
 def main () :
     i = st.slider('Choose Image [1, 2, 3]', 1, 3)
     
-    st.write("Translation")
-    translation(i)
-    
-    st.write("Rotation")
-    rotation(i)
-    
-    st.write("Scale")
-    scaling(i)
-    
-    st.write("Shear")
-    shear(i)
-    
-    st.write("Reflection")
-    reflection(i)
+    option = st.sidebar.selectbox('What shape would you like to rotate?', ('Translation', 'Rotation', 'Scaling', 'Shearing', 'Reflection)
+    st.write('The image manipulation you chose is:', option)
+    if option == "Cube":
+        st.write("Translation")
+        translation(i)
+    if option == "Rotation":
+        st.write("Rotation")
+        rotation(i)
+    if option == "Scaling":
+        st.write("Scale")
+        scaling(i)
+    if option == "Shearing":
+        st.write("Shear")
+        shear(i)
+    if option == "Reflection":
+        st.write("Reflection")
+        reflection(i)
     
     
 if __name__ == '__main__':
