@@ -127,22 +127,22 @@ def midpoint(x1, y1, x2, y2, color):
 def main(): 
     st.title("This is Activity 1")
 
-    x = st.slider(
+    x = st.sidebar.slider(
         'X1',
         0, 1000)
     st.write('Value of X1: ', x)
 
-    y = st.slider(
+    y = st.sidebar.slider(
         'Y1',
         0, 1000)
     st.write('Value of Y1: ', y)
 
-    xEnd = st.slider(
+    xEnd = st.sidebar.slider(
         'X2',
         0, 1000)
     st.write('Value of X2: ', xEnd)
 
-    yEnd = st.slider(
+    yEnd = st.sidebar.slider(
         'Y2',
         0, 1000)
     st.write('Value of Y2: ', yEnd)
