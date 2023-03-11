@@ -121,19 +121,7 @@ def translate(points):
 
 
     with tf.compat.v1.Session() as session:
-        if option == "Cube":
-            translated_shape = session.run(translated_shape)
-            _plt_basic_object(translated_shape
-            
-        if option == "Pyramid":
-            translated_shape = session.run(translated_shape)
-            _plt_basic_object(translated_shape
-            
-        if option == "Rectangle":
-            translated_shape = session.run(translated_shape)
-            _plt_basic_object(translated_shape
-            
-        if option == "Diamond":
+ 
             translated_shape = session.run(translated_shape)
             _plt_basic_object(translated_shape)       
             
@@ -178,12 +166,8 @@ def main():
         _cube_(bottom_lower=(0, 0, 0), side_length=3)
         init_cube_ = _cube_(side_length=3)
         points = tf.constant(init_cube_, dtype=tf.float32)
-        method = st.selectbox('What would you like to do', ('Translate', 'Rotate'))
-        st.write('The shape you chose is:', method)
-        if option == "Translate":
-            translate(points)
-        if option == "Rotate":
-            rotate(option, points)
+        translate(points)
+        rotate(option, points)
         
     if option == "Pyramid":
         _pyramid_(side_length=1)
