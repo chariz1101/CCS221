@@ -13,7 +13,8 @@ st.title("This is Activity 4")
 
 tf.compat.v1.disable_eager_execution()
 
-option=[]    
+option=[] 
+method=[]
 
 def _cube_(method, bottom_lower=(0, 0, 0), side_length=3):
     """Create cube starting from the given bottom-lower point (lowest x, y, z values)"""
