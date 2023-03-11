@@ -101,11 +101,14 @@ def reflection(i):
 
 def main () :
     i = st.slider('Choose Image [1, 2, 3]', 1, 3)
-    
     option = st.sidebar.selectbox('What shape would you like to rotate?', ('Translation', 'Rotation', 'Scaling', 'Shearing', 'Reflection'))
     st.write('The image manipulation you chose is:', option)
     if option == "Cube":
         st.write("Translation")
+        x = st.sidebar.slider('X', 0, 300)
+        st.write('Value of X Coordinate: ', x)
+        y = st.sidebar.slider('Y',0, 300)
+        st.write('Value of Y Coordinates: ', y)
         translation(i, x, y)
     if option == "Rotation":
         st.write("Rotation")
