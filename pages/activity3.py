@@ -105,9 +105,9 @@ def main () :
     st.write('The image manipulation you chose is:', option)
     if option == "Cube":
         st.write("Translation")
-        x = st.sidebar.slider('X', 0, 300)
+        x = st.sidebar.slider('x', 0, 300)
         st.write('Value of X Coordinate: ', x)
-        y = st.sidebar.slider('Y',0, 300)
+        y = st.sidebar.slider('x',0, 300)
         st.write('Value of Y Coordinates: ', y)
         translation(i, x, y)
     if option == "Rotation":
