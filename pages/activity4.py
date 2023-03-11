@@ -190,8 +190,6 @@ def main():
         _diamond_(side_length=1)
         init_pyramid_ = _diamond_(side_length=1)
         points = tf.constant(init_diamond_, dtype=tf.float32)
-        method = st.selectbox('What would you like to do?', ('Translate', 'Rotate'))
-        st.write('You decided to:', method)
         translate(points)
         rotate(option, points) 
         
