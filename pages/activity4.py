@@ -164,8 +164,8 @@ def main():
     st.write('The shape you chose is:', option)
 
     if option == "Cube":
-        _cube_(bottom_lower=(0, 0, 0), side_length=3)
-        init_cube_ = _cube_(side_length=3)
+        _cube_(method, bottom_lower=(0, 0, 0), side_length=3)
+        init_cube_ = _cube_(method, side_length=3)
         points = tf.constant(init_cube_, dtype=tf.float32)
         method = st.selectbox('What would you like to do?', ('Translate', 'Rotate'))
         st.write('You decided to:', method)
@@ -175,8 +175,8 @@ def main():
             rotate(option, points)
         
     if option == "Pyramid":
-        _pyramid_(side_length=1)
-        init_pyramid_ = _pyramid_(side_length=1)
+        _pyramid_(method, side_length=1)
+        init_pyramid_ = _pyramid_(method, side_length=1)
         points = tf.constant(init_pyramid_, dtype=tf.float32)
         method = st.selectbox('What would you like to do?', ('Translate', 'Rotate'))
         st.write('You decided to:', method)
@@ -186,8 +186,8 @@ def main():
             rotate(option, points)
             
     if option == "Rectangle":
-        _rectangle_(side_length=3)
-        init_pyramid_ = _rectangle_(side_length=3)
+        _rectangle_(method, side_length=3)
+        init_pyramid_ = _rectangle_(method, side_length=3)
         points = tf.constant(init_rectangle_, dtype=tf.float32)
         method = st.selectbox('What would you like to do?', ('Translate', 'Rotate'))
         st.write('You decided to:', method)
@@ -197,8 +197,8 @@ def main():
             rotate(option, points)
             
     if option == "Diamond":
-        _diamond_(side_length=1)
-        init_pyramid_ = _diamond_(side_length=1)
+        _diamond_(method, side_length=1)
+        init_pyramid_ = _diamond_(method, side_length=1)
         points = tf.constant(init_diamond_, dtype=tf.float32)
         method = st.selectbox('What would you like to do?', ('Translate', 'Rotate'))
         st.write('You decided to:', method)
