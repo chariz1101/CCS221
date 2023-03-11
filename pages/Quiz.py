@@ -7,10 +7,7 @@ png = str(".png")
 fig = plt.figure()
 path = str("pages/")
 
-Bx_old = []
-By_old = []
-Tx = []
-Ty = []
+
 
 def translation(Bx_old, By_old):
     
@@ -20,7 +17,7 @@ def translation(Bx_old, By_old):
                                  [0, 0, 1]])
     
  
-    image = cv2.imread(path + str(i) + png)
+    image = cv2.imread("1.png")
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     cols, rows = (image.shape[:2])
 
@@ -39,7 +36,7 @@ def translation_new(Bx_new,By_new):
                                  [0, 0, 1]])
     
  
-    image = cv2.imread(path + str(i) + png)
+    image = cv2.imread("1.png")
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     cols, rows = (image.shape[:2])
 
@@ -51,7 +48,13 @@ def translation_new(Bx_new,By_new):
 
 
 def main () :
-    st.title('This is Activity 3')
+    
+    Bx_old = []
+    By_old = []
+    Tx = []
+    Ty = []
+
+    st.title('Quiz')
     
     x = st.sidebar.slider(
         'Initial X',
