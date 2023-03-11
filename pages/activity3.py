@@ -113,7 +113,7 @@ def main ():
     
     if choice == "Translation" :
         st.subheader ("Translation")
-        
+        i = st.slider('Choose Image (1-3)', 1, 3, 1)
         x = st.sidebar.slider('X',0 , 1)
         st.write('Value of X: ', x)
         y = st.sidebar.slider('Y',0 , 1)
