@@ -34,7 +34,7 @@ def _cube_(method, bottom_lower=(0, 0, 0), side_length=3):
 
 
     return points
-def _pyramid_(side_length=1, method):
+def _pyramid_(method, side_length=1):
 
     points = np.vstack([
             ([[-1, -1, -1],
@@ -48,7 +48,7 @@ def _pyramid_(side_length=1, method):
 
 
 
-def _rectangle_(bottom_lower=(0, 0, 0), side_length=2, method):
+def _rectangle_(method, bottom_lower=(0, 0, 0), side_length=2):
     """Create cube starting from the given bottom-lower point (lowest x, y, z values)"""
     bottom_lower = np.array(bottom_lower)
     
@@ -67,7 +67,7 @@ def _rectangle_(bottom_lower=(0, 0, 0), side_length=2, method):
 
 
 
-def _diamond_(side_length=1, method):
+def _diamond_(method, side_length=1):
 
     points = np.vstack([
                 ([[-1, -1, -1],
