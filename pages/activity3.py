@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib as plt
 from PIL import Image
-import cv2
+import opencv as cv2
 
 #to read images
 png = str(".png")
