@@ -3,9 +3,12 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-image = cv2.imread("1.PNG")
+
+png = str(".png")
+path = str("pages/")
+image = cv2.imread(path + str(i) + png)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-cols, rows, dims = image.shape
+cols, rows = image.shape[:2]
 
 Bx_old = []
 By_old = []
