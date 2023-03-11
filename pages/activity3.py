@@ -106,7 +106,7 @@ def main () :
     st.write("Translation")
     x = st.sidebar.slider('x', 0, 300)
     st.write('Value of X Coordinate: ', x)
-    y = st.sidebar.slider('x',0, 300)
+    y = st.sidebar.slider('y',0, 300)
     st.write('Value of Y Coordinate: ', y)
     
     
