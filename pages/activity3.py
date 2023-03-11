@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib as plt
+from PIL import Image
 #import cv2
 
 #i = int(1)
@@ -17,6 +18,9 @@ import matplotlib as plt
 #        plt.show()
 #        st.pyplot (translated_image)
 
+def load_image (image_upload):
+      img = Image.open(image_upload)
+      return img
 
    
 def image_ups ():
@@ -24,8 +28,8 @@ def image_ups ():
       for image_uploads in image_upload:
          bytes_data = image_uploads.read()
          st.write("filename:", image_uploads.name)
-         #img = load_image(image_upload)
-         #st.image(img)
+         img = load_image(image_upload)
+         st.image(img)
         
         
         
