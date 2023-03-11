@@ -5,16 +5,12 @@ import cv2
 
 #to read images
 png = str(".png")
+fig = plt.figure()
 path = str("pages/")
 
-x = []
-y = []
-scale = []
-
-
-def translation(i, x, y):
-        m_translation_ = np.float32([[1, 0, x],
-                                    [0, 1, y],
+def translation(i):
+        m_translation_ = np.float32([[1, 0, 100],
+                                    [0, 1, 150],
                                     [0, 0, 1]
                                  ])
         
@@ -45,9 +41,9 @@ def rotation(i):
         plt.show()
         st.pyplot (fig)
         
-def scaling(i, scale):
-        m_scaling_ = np.float32([[scale, 0, 0],
-                            [0, scale, 0],
+def scaling(i):
+        m_scaling_ = np.float32([[1.5, 0, 100],
+                            [0, 1.8, 0],
                             [0, 0, 1]
                             ])
         
@@ -63,9 +59,9 @@ def scaling(i, scale):
         st.pyplot (fig)
         
        
-def shear(i, x, y):
-        m_shearing_ = np.float32([[1, x, 0],
-                            [y, 1, 0],
+def shear(i):
+        m_shearing_ = np.float32([[1,0, 0],
+                            [0, 1, 0],
                             [0, 0, 1]
                             ])
         
@@ -98,14 +94,7 @@ def reflection(i):
         plt.show ()
         st.pyplot(fig)
         
-        
- 
-        
-        
-        
-        
-        
-        
+       
 def main ():
     st.title ("Activity 3: Image Manipulator")
     Manipulation = ["Translation", "Rotation", "Scaling", "Shear", "Reflection"]
