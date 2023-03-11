@@ -166,29 +166,37 @@ def main():
         _cube_(bottom_lower=(0, 0, 0), side_length=3)
         init_cube_ = _cube_(side_length=3)
         points = tf.constant(init_cube_, dtype=tf.float32)
+        st.subheader ('Translated Cube: ')
         translate(points)
+        st.subheader ('Cube rotated 75 Degrees: ')
         rotate(option, points)
         
     if option == "Pyramid":
         _pyramid_(side_length=1)
         init_pyramid_ = _pyramid_(side_length=1)
         points = tf.constant(init_pyramid_, dtype=tf.float32)
+        st.subheader ('Translated Pyramid: ')
         translate(points)
+        st.subheader ('Pyramid rotated 75 Degrees: ')
         rotate(option, points)
             
     if option == "Rectangle":
         _rectangle_(side_length=3)
         init_pyramid_ = _rectangle_(side_length=3)
         points = tf.constant(init_rectangle_, dtype=tf.float32)
+        st.subheader ('Translated Rectangle: ')
         translate(points)
+        st.subheader ('Rectangle rotated 75 Degrees: ')
         rotate(option, points)
             
     if option == "Diamond":
         _diamond_(side_length=1)
         init_pyramid_ = _diamond_(side_length=1)
         points = tf.constant(init_diamond_, dtype=tf.float32)
+        st.subheader ('Translated Diamond: ')
         translate(points)
-        rotate(option, points) 
+        st.subheader ('Diamond rotated 75 Degrees: ')
+        rotate(option, points)
         
 if __name__ == '__main__':
     main()
