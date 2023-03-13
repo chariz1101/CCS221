@@ -129,12 +129,12 @@ def main():
 
     x = st.sidebar.slider(
         'X1',
-        0, 1000)
+        1, 1000)
     st.write('Value of X1: ', x)
 
     y = st.sidebar.slider(
         'Y1',
-        0, 1000)
+        1, 1000)
     st.write('Value of Y1: ', y)
 
     xEnd = st.sidebar.slider(
