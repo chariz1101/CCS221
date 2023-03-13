@@ -29,10 +29,10 @@ def fill(x, y, replace):
 def main():
    st.title("This is Activity 2")
 
-   x = st.sidebar.slider('y',0, 2, 0, 1)
+   x = st.sidebar.slider('y',0, 2, 1)
    st.write('Value of X:', x)
     
-   y = st.sidebar.slider('x',0, 2, 0, 1)
+   y = st.sidebar.slider('x',0, 2, 1)
    st.write('Value of Y:', y)
     
    replace = st.sidebar.slider('color',0, 1000, 500)
